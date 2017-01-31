@@ -1,0 +1,95 @@
+kind of document where the changes are stored:
+git init
+it will become (master) 
+if a folder begging with a . is hidden
+To add things to the repository : git add NAME.txt 
+(txt for example) it moves to the area which is in between
+folder and repository 
+
+------------------------------------
+
+git status tell us which files did we change
+
+                (ver repositorycaptura1)
+
+when we do a commit we transfer files from area to repository
+ : git commit -m "ASDFFGH"
+  if it says:
+   "  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+we have to fill it with our email and name" 
+      git config --global user.email "sheiladato33@gmail.com"
+-------------------------------
+
+a good commit says:
+  usuario@asus MINGW64 /c/Users/usuario/Documents/basesDatos/poetry (master)
+$ git commit -m "comentary of the poems"
+[master (root-commit) 450abc8] comentary of the poems
+ 2 files changed, 6 insertions(+)   // number of lines
+ create mode 100644 1.txt
+ create mode 100644 2.txt
+
+
+usuario@asus MINGW64 /c/Users/usuario/Documents/basesDatos/poetry (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+-------------------------
+
+GIT LOG tell us the thing that has been changed in order
+  example)
+   usuario@asus MINGW64 /c/Users/usuario/Documents/basesDatos/poetryREPOSITORY (master)
+$ git log
+commit 697f6025a2a1b449bab5430822e02ebee2ec7f1b
+Author: SheilaDescri <sheiladato33@gmail.com>
+Date:   Tue Jan 31 14:50:53 2017 +0100
+
+    improve
+
+commit 450abc89a2ee18ddbda0ef9464a40b598f454f1c
+Author: SheilaDescri <sheiladato33@gmail.com>
+Date:   Mon Jan 30 17:17:14 2017 +0100
+
+    comentary of the poems
+
+----------------------------
+
+GIT DIFF to compare two changes:
+
+This means that everything is in repository and nothing in the area
+
+usuario@asus MINGW64 /c/Users/usuario/Documents/basesDatos/poetryREPOSITORY (master)
+$ git diff 697f6 450abc
+diff --git a/1.txt b/1.txt
+index 0727045..9ebaafc 100644
+--- a/1.txt
++++ b/1.txt
+@@ -1,3 +1,3 @@
+-oceansuper blah (red)
++ocean blah      (green)
+ seasonal blah
+ swift blah
+---------------------
+SHELL COMMAND:  MV NAME.TYPE NAMEOFFOLDER/
+to move files from one folder to older
+
+  EXAMPLE:
+$ mkdir java
+
+usuario@asus MINGW64 /c/Users/usuario/Documents/basesDatos/poetryREPOSITORY (master)
+$ ls
+1.txt  2.txt  hello.java  java/  repository.txt  RepositoryCaptura1.PNG
+
+usuario@asus MINGW64 /c/Users/usuario/Documents/basesDatos/poetryREPOSITORY (master)
+$ mv hello.java java/
+
+usuario@asus MINGW64 /c/Users/usuario/Documents/basesDatos/poetryREPOSITORY (master)
+$ ls
+1.txt  2.txt  java/  repository.txt  RepositoryCaptura1.PNG
+
+--------------------------
+GIT ADD * to add everything that is in our directory to the area
+
+
